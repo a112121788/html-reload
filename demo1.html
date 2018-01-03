@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=0">
+    <title>我的信息</title>
+    <link href="//cdn.bootcss.com/weui/1.1.2/style/weui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="./css/wechat_base.css">
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+</head>
+<div>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=0">
+        <title>我的信息</title>
+        <link rel="stylesheet" href="./css/wechat_base.css">
+        <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    </head>
+
+    <body ontouchstart>
+        <!--性别修改弹框-->
+        <div class="weui_dialog_alert" id="doctorSexDialog" style="display: none;">
+            <div class="weui_mask"></div>
+            <div class="weui_dialog">
+                <div class="weui_dialog_hd"><strong class="weui_dialog_title">医生性别</strong></div>
+                <div class="weui_dialog_bd">
+                    <!--选择性别-->
+                    <div class="weui-cells weui-cells_radio">
+                        <label class="weui-cell weui-check__label" for="r1">
+                            <div class="weui-cell__bd">男</div>
+                            <div class="weui-cell__ft">
+                                <input required="" type="radio" class="weui-check" name="sex" value="男" id="r1" tips="请选择性别">
+                                <span class="weui-icon-checked"></span>
+                            </div>
+                        </label>
+                        <label class="weui-cell weui-check__label" for="r2">
+                            <div class="weui-cell__bd">女</div>
+                            <div class="weui-cell__ft">
+                                <input type="radio" name="sex" class="weui-check" value="女" id="r2">
+                                <span class="weui-icon-checked"></span>
+                            </div>
+                        </label>
+                    </div>
+                    <!--选择性别-->
+                </div>
+                <div class="weui_dialog_ft">
+                    <div id="saveDoctorSex" class="weui_btn_dialog primary">确定</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    $('#saveDoctorSex').click(function() {
+        var doctorSex = $("input[name='sex']:checked").val();
+        console.log("3416456" + doctorSex);
+        $('#doctorSexShow').html(doctorSex);
+    });
+    </script>
+
+    </html>
